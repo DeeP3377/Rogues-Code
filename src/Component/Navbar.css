@@ -1,0 +1,216 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+.usericon{
+	font-size: 48px;
+}
+.NavbarBlock{
+	background-color: #222831;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+	width: 100%;
+	max-width: 1920px;
+	height: 70px;
+	z-index: 10;
+	position:fixed;
+}
+header {
+		width: 100%;
+		height: 70px;
+		max-width: 1366px;
+		margin: auto;
+		background-color:  #222831;
+		top:0px;
+		right: 0px;
+		left: 0;
+		
+}
+
+header > .logo {
+		float: left;
+		line-height: 70px;
+        color: #fff;
+}
+
+header > nav {
+		float: right;
+}
+
+header > nav > .Nav-Link {
+		float: left;
+		height: 100%;
+		position: relative;
+}
+
+header > nav > .Nav-Link > .Nav-Link-a {
+		text-align: center;
+		width: 100%;
+		height: 100%;
+		display: block;
+		line-height: 70px;
+		padding: 0 20px;
+		color: #fbfbfb;
+		transition: background-color 0.2s ease;
+		/*text-transform: uppercase;*/
+        text-decoration: none;
+		font-size: 16px;
+}
+
+header > nav > .Nav-Link:hover > .Nav-Link-a {
+		background-color: rgb(97, 96, 96);
+        color: white;
+		cursor: pointer;
+		
+		
+}
+
+header > nav > .Nav-Link > .Sub-Menu {
+		display: none;
+		overflow: hidden;
+		background-color: transparent;
+		min-width: 200%;
+		position: absolute;
+		padding: 10px;
+		font-size: 14px;
+}
+
+header > nav > .Nav-Link:not(:first-of-type):not(:last-of-type) > .Sub-Menu {
+		left: -50%;
+}
+
+header > nav > .Nav-Link:first-of-type > .Sub-Menu {
+		left: 0;
+		border-radius: 0 0 3px 0;
+}
+
+header > nav > .Nav-Link:last-of-type > .Sub-Menu {
+		right: 0;
+		border-radius: 0 0 0 3px;
+		min-width: 250%;
+}
+
+header > nav > .Nav-Link:hover > .Sub-Menu {
+	margin-top: -6px;
+		display: block;
+		z-index: 2;
+}
+
+header > nav > .Nav-Link > .Sub-Menu > a {
+		display: block;
+		float: left;
+		padding: 12px 16px;
+		width: 100%;
+		text-align: center;
+		background-color: rgb(97, 96, 96);
+		color: #fff;
+		border-radius: 2px;
+		transition: background-color 0.2s ease;
+        text-decoration: none;
+}
+
+header > nav > .Nav-Link >.Sub-Menu > .sub-menulink:hover {
+		background-color: #ff5e14;
+		color: #fff;
+		cursor: pointer;
+}
+
+header > .material-icons {
+		display: none;
+}
+
+
+
+@media (max-width:600px) {
+		header > nav > .Nav-Link >.Sub-Menu > .sub-menulink {
+				margin: 5px 0;
+				width: 100%;
+		}
+		header > nav > .Nav-Link > a > span {
+				display: none;
+		}
+}
+
+@media (max-width:868px) {
+	header > .logo {
+		padding: 0 20px;
+	}
+		header > nav {
+				overflow-y: scroll;
+				background-color: white;
+				position: fixed;
+				top: 0;
+				right: -300px;
+				width: 200px;
+				box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+				height: 100%;
+				transition: right 0.3s ease;
+				z-index: 2;
+		}
+		header > nav > .Nav-Link {
+				height: initial;
+				float: none;
+				position: relative;
+		}
+		header > nav > .Nav-Link > a {
+				color: #212121;
+				text-align: left;
+		}
+		header > nav > .Nav-Link > .Sub-Menu {
+				display: block;
+				position: static;
+				min-width: 100% !important;
+				float: none;
+				box-shadow: none;
+				padding: 0;
+				margin: 0;
+				border-radius: 1px !important;
+		}
+		header > nav > .Nav-Link > .Nav-Link-a  {
+            background-color: rgb(90, 90, 90);
+			
+    }
+        header > nav > .Nav-Link > .Nav-Link-a:hover  {
+            background-color: rgb(68, 67, 67);
+			
+    }
+		header > nav > .Nav-Link > .Sub-Menu > .sub-menulink {
+				float: none;
+				width: 100%;
+				margin: 0;
+				text-align: left;
+				border-radius: 1px;
+				padding: 8px 20px;
+				background-color: #eee;
+				color: rgb(83, 83, 83);
+		}
+		header > nav > .Nav-Link > .Sub-Menu > .sub-menulink:hover {
+				background-color: #ccc;
+				color: black;
+		}
+		header > .material-icons {
+				display: block;
+				color: #fbfbfb;
+				line-height: 70px;
+				float: right;
+				font-size: 32px;
+				padding: 0 15px;
+				transition: background-color 0.2s ease;
+		}
+		header > .material-icons:hover {
+				background-color: rgba(0, 0, 0, 0.1);
+				cursor: pointer;
+		}
+		header > .material-icons:hover + nav,
+		nav:hover {
+				right: 0;
+		}
+		header .black {
+				transition: background-color 0.3s ease;
+		}
+		header > .material-icons:hover ~ .black,
+		nav:hover ~ .black {
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				background-color: rgba(0, 0, 0, 0.2);
+				z-index: 1;
+				pointer-events: none;
+		}
+}

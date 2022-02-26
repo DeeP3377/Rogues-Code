@@ -1,0 +1,63 @@
+
+.today-deals{
+    display: flex;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.today-deals-div{
+    height: fit-content;
+}
+.view-all-btn{
+    background-color: #3366cc;
+    color: #fff;
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+    font-weight: 500;
+    right: 5px;
+    text-decoration: none;
+}
+.view-all-btn:hover{
+    text-decoration: none;
+    color: #fff;
+}
+.card{
+    max-width: 300px;
+    height: 400px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+.card-image{
+    width: 96%;
+    max-width: 280px;
+    height: 280px;
+    margin: auto;
+}
+.card-title{
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+}
+.view-item{
+    background-color: #3366cc;
+    color: #fff;
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+}
+.view-item:hover{
+    color: #fff;
+    text-decoration: none;
+}
+@media(max-width: 550px) {
+    .card-image{
+        height: 200px;
+        margin: auto;
+    }
+}
